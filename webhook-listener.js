@@ -14,7 +14,7 @@ app.post('/', express.raw({ type: 'application/json' }), (req, res) => {
 
   //console.log(SECRET,sig,hmac);
 
-  if (sig !== 'PASSWORD') return res.status(401).send('Unauthorized');
+  //if (sig !== 'PASSWORD') return res.status(401).send('Unauthorized');
   //if (sig !== hmac) return res.status(401).send('Unauthorized');
   console.log('signature is okay'); 
   
