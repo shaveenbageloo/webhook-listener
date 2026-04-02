@@ -9,8 +9,8 @@ const SECRET = process.env.WEBHOOK_SECRET;
 app.post('/', express.raw({ type: 'application/json' }), (req, res) => {
   console.log('Webhook called....');
 
-  const sig = req.headers['x-hub-signature-256'];
-  const hmac = 'sha256=' + crypto.createHmac('sha256', SECRET).update(req.body).digest('hex');
+  // const sig = req.headers['x-hub-signature-256'];
+  // const hmac = 'sha256=' + crypto.createHmac('sha256', SECRET).update(req.body).digest('hex');
 
   //console.log(SECRET,sig,hmac);
 
