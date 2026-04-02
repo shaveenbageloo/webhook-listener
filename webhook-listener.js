@@ -19,7 +19,7 @@ app.post('/', express.raw({ type: 'application/json' }), (req, res) => {
   console.log('signature is okay'); 
   
   res.sendStatus(200);
-  exec('/home/pi/myapp/update.sh', (err, stdout) => {
+  exec('/home/shaveenbageloo/customApps/update.sh', (err, stdout) => {
   //exec('ls -lrt', (err, stdout) => {
     if (err) console.error('Update failed:', err);
     else console.log('Updated:', stdout);
